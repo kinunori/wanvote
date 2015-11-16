@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wanvote</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+   <header class="navbar">
+     <div class="container">
+       <div id="logo">Wanvote</div>
+       <ul class="header-right">
+       </ul>
+     </div>
+   </header>
+
+  <div class="container">
+   <%= yield %>
+  </div>
+
+
+</body>
+</html>
