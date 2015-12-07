@@ -1,5 +1,7 @@
 <h1>新規登録する</h1>
 
+<%= render 'form' %>
+
 <% if @vote.errors.any? %>
  <h2><%= @vote.errors.count  %> 件のエラーを修正してください </h2>
  
@@ -11,10 +13,11 @@
 <end>
 
 <%= form_tag votes_path do %>
+  
   タイトル
   <%= text_field_tag 'vote[title]', vnote.title, class: "form-control title-field" %>
   内容
   <%= text_area_tag 'vote[content]', vnote.content, class: "form-control content-field" %>
-  <input type="submit" value="投稿する" class="btn primary-btn">
 <% end %>
 
+<%= link_to 'Back', votes_path %>
